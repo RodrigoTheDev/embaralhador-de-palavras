@@ -22,11 +22,14 @@ function copiar() {
     alert("Copiado com sucesso" );
 }
 
+function copiar_advanced() {
+    navigator.clipboard.writeText(advanced_copy)
+}
 
 
 let todasHashtags = [];
 let gen_nums = [];
-
+let advanced_copy = ""
 let selecionados = []
 
 
@@ -91,6 +94,7 @@ function embaralhar_add() {
             texto += get_rand(todasHashtags) + ' '
         }
         result_campo.append(document.createElement('p').innerHTML = texto+'\n')
+        advanced_copy += texto + ' '
         result_campo.append(document.createElement('br'))
     } catch {
         alert('erro')
@@ -99,6 +103,7 @@ function embaralhar_add() {
 
 function embaralhar_advanced() {
     reset()
+    advanced_copy = ""
     ammount = parseInt(vezes_campo.value)
 
     for(let i = 0; i < ammount; i++) {
