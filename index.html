@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Embaralhador de palavras</title>
 </head>
 <body>
     <p>Insira as palavras que você quer</p>
-    <textarea name="" id="insert-text-area" cols="30" rows="10"></textarea>
+    <textarea name="" id="insert-text-area" cols="30" rows="10" spellcheck="false"></textarea>
     <p>Número de palavras embaralhadas: </p>
     <input type="text" id="insert-size" placeholder="limite">
     <button id="randomize" onclick="embaralhar()">Embaralhar</button>
     <br>
     <p>resultado</p>
-    <textarea name="" id="result" cols="30" rows="10"></textarea>
+    <textarea name="" id="result" cols="30" rows="10" spellcheck="false"></textarea>
     <br>
     <button onclick="copiar()">Copiar</button>
     <br>
-    <a onclick="novaAba('https://github.com/RodrigoTheDev')" id="visita">Visite meu github :)</a>
+    <div id="visita-div">
+
+        <a onclick="novaAba('https://github.com/RodrigoTheDev')" id="visita">Visite meu github :)</a>
+    </div>
 
     <script src="./randomizer.js"></script>
 </body>

@@ -1,0 +1,48 @@
+:root {
+    --preto:rgb(36, 36, 36);
+    --branco:rgb(215, 215, 215);
+    --cinza: rgb(71, 71, 71);
+}
+
+body {
+    font-family: arial;
+    font-size: 18px;
+
+    background-color:var(--preto);
+    color: var(--branco);
+
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--branco);
+    border-style:none;
+}
+button:hover {
+    background-color: rgb(51, 135, 51);
+}
+
+textarea {
+    width:100%;
+    resize: none;
+    background-color: var(--cinza);
+    color: var(--branco);
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#visita {
+    background-color: black;
+    padding: 10px;
+}
+#visita:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+#visita-div {
+    margin-top: 15px;
+}
