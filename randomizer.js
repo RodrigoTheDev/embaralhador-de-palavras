@@ -4,14 +4,31 @@
 
 const insert_campo = document.querySelector('#insert-text-area')
 const lim_campo = document.querySelector('#insert-size')
+const vezes_campo = document.querySelector('#insert-ammount')
 const result_campo = document.querySelector('#result')
+
+//funções de SITE
+function novaAba(url) {
+    window.open(url, '_blank').focus();
+}
+
+function copiar() {
+    let copyText = result_campo.value
+
+// Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+
+    // Alert the copied text
+    alert("Copiado com sucesso" );
+}
+
+
 
 let todasHashtags = [];
 let gen_nums = [];
 
 let selecionados = []
 
-let lim = 5
 
 
 
@@ -45,15 +62,14 @@ function reset() {
 function embaralhar() {
     try {
         reset()
-        
-        todasHashtags = String(insert_campo.value).split(' ')
-        
         lim = parseInt(lim_campo.value)
-        for(let i = 0; i < lim; i++) {
-            // selecionados.push(get_rand(todasHashtags))
-            result_campo.value += get_rand(todasHashtags) + ' '
-    
-        }
+        todasHashtags = String(insert_campo.value).split(' ')
+
+            
+            for(let j = 0; j < lim; j++) {
+                // selecionados.push(get_rand(todasHashtags))
+                result_campo.value += get_rand(todasHashtags) + ' '
+            }
 
 
     } catch {
@@ -62,16 +78,31 @@ function embaralhar() {
     }
 }
 
-function novaAba(url) {
-    window.open(url, '_blank').focus();
+function embaralhar_add() {
+    try {
+        reset()
+        let texto = ""
+        lim = parseInt(lim_campo.value)
+        todasHashtags = String(insert_campo.value).split(' ')
+    
+            
+        for(let j = 0; j < lim; j++) {
+            // selecionados.push(get_rand(todasHashtags))
+            texto += get_rand(todasHashtags) + ' '
+        }
+        result_campo.append(document.createElement('p').innerHTML = texto+'\n')
+        result_campo.append(document.createElement('br'))
+    } catch {
+        alert('erro')
+    }
 }
 
-function copiar() {
-    let copyText = result_campo.value
+function embaralhar_advanced() {
+    reset()
+    ammount = parseInt(vezes_campo.value)
 
-// Copy the text inside the text field
-    navigator.clipboard.writeText(copyText);
+    for(let i = 0; i < ammount; i++) {
+        embaralhar_add()
+    }
 
-    // Alert the copied text
-    alert("Copiado com sucesso" );
 }

@@ -7,12 +7,14 @@
 body {
     font-family: arial;
     font-size: 18px;
-
     background-color:var(--preto);
     color: var(--branco);
 
 }
 
+a {
+    text-decoration: none;
+}
 input {
     padding: 10px;
 }
