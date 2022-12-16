@@ -1,5 +1,6 @@
-//código desenvolvido com ajuda do post no Stack Overflow:
+//código desenvolvido por @RodrigoTheDev com ajuda do post no Stack Overflow:
 //https://stackoverflow.com/questions/3796786/random-number-generator-without-dupes-in-javascript
+
 
 const insert_campo = document.querySelector('#insert-text-area')
 const lim_campo = document.querySelector('#insert-size')
