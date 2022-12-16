@@ -41,12 +41,13 @@ function reset() {
     result_campo.value = ' '
 }
 
+
 function embaralhar() {
     try {
         reset()
         
-
         todasHashtags = String(insert_campo.value).split(' ')
+        
         lim = parseInt(lim_campo.value)
         for(let i = 0; i < lim; i++) {
             // selecionados.push(get_rand(todasHashtags))
@@ -54,14 +55,23 @@ function embaralhar() {
     
         }
 
-        console.log(selecionados)
-        console.log(todasHashtags)
 
     } catch {
-        alert('Algo deu errado')
+        alert('algo deu errado')
         location.reload()
     }
 }
 
+function novaAba(url) {
+    window.open(url, '_blank').focus();
+}
 
+function copiar() {
+    let copyText = result_campo.value
 
+// Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+
+    // Alert the copied text
+    alert("Copiado com sucesso" );
+}
