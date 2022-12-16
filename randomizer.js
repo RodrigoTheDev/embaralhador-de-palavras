@@ -24,6 +24,7 @@ function copiar() {
 
 function copiar_advanced() {
     navigator.clipboard.writeText(advanced_copy)
+    alert('Copiado com exito')
 }
 
 
